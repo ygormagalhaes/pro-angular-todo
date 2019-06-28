@@ -16,4 +16,10 @@ export class AppComponent {
     getTodoItems(): TodoItem[] {
         return this.model.items.filter(item => !item.done);
     }
+
+    addItem(item: string): void {
+        if (item) {
+            this.model.items.push(new TodoItem(item, false));
+        }
+    }
 }

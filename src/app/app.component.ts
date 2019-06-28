@@ -14,6 +14,6 @@ export class AppComponent {
     }
 
     getTodoItems(): TodoItem[] {
-        return this.model.items;
+        return this.model.items.filter(item => !item.done);
     }
 }

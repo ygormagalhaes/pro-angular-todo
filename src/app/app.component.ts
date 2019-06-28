@@ -1,4 +1,4 @@
-import { Model } from './model';
+import { Model, TodoItem } from './model';
 import { Component } from '@angular/core';
 
 @Component({
@@ -11,5 +11,9 @@ export class AppComponent {
 
     getName(): string {
         return this.model.user;
+    }
+
+    getTodoItems(): TodoItem[] {
+        return this.model.items;
     }
 }
